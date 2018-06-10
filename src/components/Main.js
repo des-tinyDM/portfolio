@@ -1,15 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import { Document, Page } from 'react-pdf'
-import 'react-pdf/dist/Page/AnnotationLayer.css'
-
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import grsrtshero from '../images/grsrtshero.png'
 import skills from '../images/skills.png'
 import qode from '../images/qode.png'
-import resume from '../images/resume.pdf'
+import resume from '../images/resume.png'
+
+const options = {
+  cMapUrl: 'cmaps/',
+  cMapPacked: true,
+}
 
 class Main extends React.Component {
   state = {
@@ -50,10 +52,20 @@ class Main extends React.Component {
           <p>
             Hey there! I'm Destiny. I'm an ex-campaign manager and Returned
             Peace Corps Volunteer turned full stack dev. I have a passion for
-            data and a tireless drive for work that I care about.
+            data and love everything from data collection methods and research
+            design, to I have a tendency to go 'all in' with whatever I'm
+            working on--for a time that meant 16 hour work-days. I'm dedicated
+            to writing clean and efficient code. I'm excited to work on projects
+            where I'd have to manage data.
+          </p>
+
+          <p>
+            When I'm not at my standing-desk working on projects, I'm either
+            hiking with my pup, or practicing one of many musical instruments
+            that I know.
           </p>
           <p>
-            While I'm By the way, check out my <a href="#work">awesome work</a>.
+            By the way, check out my <a href="#portfolio"> portfolio</a>.
           </p>
 
           {close}
@@ -89,10 +101,16 @@ class Main extends React.Component {
               alignItems: 'center',
               justifyContent: 'center',
             }}
-          >
-            <Document file={resume} onLoadSuccess={this.onDocumentLoad}>
-              <Page pageNumber={pageNumber} />
-            </Document>
+          />
+          <p>
+            Download a pdf copy of my resume with annotations and links
+            &nbsp;-cc
+            <a href="https://www.scribd.com/document/381026526/Resume&output=embed">
+              here!
+            </a>
+          </p>
+          <div style={{}}>
+            <img src={resume} style={{ width: '100%' }} />
           </div>
           {close}
         </article>
@@ -163,7 +181,12 @@ class Main extends React.Component {
             developed to be a crash-course introduction for beginners to code,
             who aren't satisified with other free options.
           </p>
-          <p>Qode was developed on </p>
+          <p>
+            Qode was developed using React; most of the app takes advantage of
+            React's component-based architecure and uses extremely reusable
+            higher-order components to render content to the screen. The backend
+            is run using Express and connects to a PostgreSQL database.
+          </p>
           {close}
         </article>
 
