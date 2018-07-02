@@ -1,0 +1,2 @@
+webpackJsonp([0x5d16ea1533fc],{337:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Destiny Ross",description:"Fullstack Developer portfolio site for Destiny Ross."}}},pathContext:{}}}});
+//# sourceMappingURL=path---new-page-3bbeaee8cb430b303471.js.map
